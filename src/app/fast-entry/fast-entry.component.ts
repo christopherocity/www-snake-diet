@@ -8,12 +8,12 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class FastEntryComponent implements OnInit {
 
-
   today = new Date();
   currentDate = this.today.toISOString().substr(0, 16);
 
   // @ts-ignore
   fastDuration: FormGroup;
+
 
   constructor(private fb: FormBuilder) {}
 
@@ -59,4 +59,7 @@ export class FastEntryComponent implements OnInit {
   }
 
 
+  isNaN(display: string): boolean {
+    return isNaN(+display);
+  }
 }

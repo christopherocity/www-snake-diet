@@ -1,25 +1,26 @@
-<div [formGroup]="fastDuration">
+<div [formGroup]="fastDuration" class="snake-form">
 
-  <label for="fast-start">Start:</label>
+  <h1 class="title">Calculate Your Snake Hours</h1>
 
-  <input [formControlName]="'start'"
-         [value]="currentDate"
-         type="datetime-local"
-         id="fast-start"
-         name="fast-start">
+  <label class="input-start" for="fast-start">Start:
+    <input [formControlName]="'start'"
+           [value]="currentDate"
+           type="datetime-local"
+           id="fast-start"
+           name="fast-start">
 
-  <label for="fast-end">End:</label>
+  </label>
 
-  <input [formControlName]="'end'"
-         [value]="fastDuration.value.start"
-         [disabled]="!fastDuration.value.start"
-         type="datetime-local"
-         id="fast-end"
-         [min]="fastDuration.value.start"
-         name="fast-end">
+  <label class="input-end" for="fast-end">End:
+    <input [formControlName]="'end'"
+           [value]="fastDuration.value.start"
+           [disabled]="!fastDuration.value.start"
+           type="datetime-local"
+           id="fast-end"
+           [min]="fastDuration.value.start"
+           name="fast-end">
+  </label>
 </div>
 
-<div>Start: {{fastStart}}</div>
-<div>End: {{fastEnd}}</div>
-<div>Total: {{fastingHours}}</div>
-<div>Snake Diet Fasting Hours: {{snakeDietHours}}</div>
+<h3 class="result">Total: {{!isNaN(fastingHours) && fastingHours > 0 ? fastingHours : 0}}</h3>
+<h3 class="result">Snake Hours: {{!isNaN(snakeDietHours) && snakeDietHours > 0 ? snakeDietHours : 0}}</h3>

@@ -1,0 +1,27 @@
+.title {
+  height: 100px;
+  width: 725px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.snake-form {
+  margin: 5% 0 0 25%;
+}
+
+.input-start {
+  margin: 0 0 0 2%;
+}
+.input-end {
+  margin: 0 0 0 12.5%;
+}
+.result {
+  height: 50px;
+  width: 1400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
