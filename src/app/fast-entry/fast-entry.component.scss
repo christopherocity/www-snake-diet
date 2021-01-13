@@ -17,11 +17,11 @@
 .input-end {
   margin: 0 0 0 12.5%;
 }
-.result {
-  height: 50px;
-  width: 1400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
+
+.top-result {
+  margin-left: 30%;
+  margin-top: 10%;
+}
+.bottom-result {
+  margin-left: 27.5%
 }
