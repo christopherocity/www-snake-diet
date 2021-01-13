@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "snake-track"
+  "defaultProject": "snake-track",
+  "cli": {
+    "analytics": "6a7dda89-1169-4a91-a0d4-927f91aa10f4"
+  }
 }

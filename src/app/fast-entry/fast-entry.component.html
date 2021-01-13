@@ -1,0 +1,25 @@
+<div [formGroup]="fastDuration">
+
+  <label for="fast-start">Start:</label>
+
+  <input [formControlName]="'start'"
+         [value]="currentDate"
+         type="datetime-local"
+         id="fast-start"
+         name="fast-start">
+
+  <label for="fast-end">End:</label>
+
+  <input [formControlName]="'end'"
+         [value]="fastDuration.value.start"
+         [disabled]="!fastDuration.value.start"
+         type="datetime-local"
+         id="fast-end"
+         [min]="fastDuration.value.start"
+         name="fast-end">
+</div>
+
+<div>Start: {{fastStart}}</div>
+<div>End: {{fastEnd}}</div>
+<div>Total: {{fastingHours}}</div>
+<div>Snake Diet Fasting Hours: {{snakeDietHours}}</div>
