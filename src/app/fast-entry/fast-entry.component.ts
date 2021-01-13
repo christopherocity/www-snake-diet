@@ -54,8 +54,8 @@ export class FastEntryComponent implements OnInit {
 
   }
 
-  get snakeDietHours(): number {
-    return +this.fastingHours - 18;
+  get snakeDietHours(): string {
+    return (+this.fastingHours - 18).toFixed(2);
   }
 
 
